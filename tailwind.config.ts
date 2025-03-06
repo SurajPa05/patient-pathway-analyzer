@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        progress: {
+          '25': '#0EA5E9', // Scan & Detect
+          '50': '#8B5CF6', // Review & Annotate
+          '75': '#F97316', // Diagnose & Plan
+          '100': '#10B981', // Finalize & Share
+          background: '#1E293B'
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,31 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'progress-fill': {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' }
+        },
+        'fade-in': {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        'scale-in': {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' }
+        },
+        'pulse-soft': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.7' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'progress-fill': 'progress-fill 0.7s ease-out forwards',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'scale-in': 'scale-in 0.4s ease-out',
+        'pulse-soft': 'pulse-soft 2s infinite'
 			}
 		}
 	},

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,32 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .progress-tab {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .progress-tab-active::before {
+    content: "";
+    @apply absolute bottom-0 left-0 h-[3px] bg-current animate-progress-fill;
+  }
+  
+  .progress-pill {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .workflow-container {
+    @apply animate-fade-in;
+  }
+
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-md border border-white/10 rounded-lg;
+  }
+  
+  .phase-transition {
+    @apply transition-all duration-500 ease-in-out;
   }
 }
