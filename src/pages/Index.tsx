@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import ScanAndDetect from "@/components/ScanAndDetect";
 import ReviewAndAnnotate from "@/components/ReviewAndAnnotate";
