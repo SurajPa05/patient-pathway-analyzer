@@ -6,9 +6,6 @@ import DiagnoseAndPlan from "@/components/DiagnoseAndPlan";
 import FinalizeAndShare from "@/components/FinalizeAndShare";
 import { motion } from "framer-motion";
 
-// Let's install framer-motion for smooth animations
-<lov-add-dependency>framer-motion@latest</lov-add-dependency>
-
 const Index = () => {
   // The workflow phases
   const phases = [
